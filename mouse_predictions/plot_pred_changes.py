@@ -88,6 +88,8 @@ for name, start, end in genes:
     f.write(header)
 
     for motif_start, motif_end in gene_to_motifs[name]:
+        motif_start -= 100 
+        motif_end += 100
         del_name = "plots/" + name + "/" + name + "_" + str(motif_start) + "_deleted.png"
         del_diff_name = "plots/" + name + "/" + name + "_" + str(motif_start) + "_deleted_log_diff.png"
         inv_name = "plots/" + name + "/" + name + "_" + str(motif_start) + "_reversed.png"
